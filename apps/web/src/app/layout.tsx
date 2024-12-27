@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "IndexOne",
-  description: "IndexOne - Open source REST API logging and monitoring",
+  title: "Opentail",
+  description: "opentail - Open-source REST API logging and monitoring",
 };
 
 export default function RootLayout({
