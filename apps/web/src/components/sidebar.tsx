@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="w-60 shrink-0 md:block h-screen sticky top-0 overflow-hidden">
+    <div className="w-52 shrink-0 md:block h-screen sticky top-0 overflow-hidden">
       <div className="w-full h-full border-r border-white/10">
         {/* logo */}
-        <div className="flex pt-8 md:px-6 items-center cursor-pointer hover:pr-5">
+        <div className="flex pt-8 md:px-6 items-center cursor-pointer hover:pr-5 pb-4 border-b border-white/10">
             <h1 className="font-bold text-2xl text-zinc-200">opentail</h1>
           </div>
         {/* menu section */}
