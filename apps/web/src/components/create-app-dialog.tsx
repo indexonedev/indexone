@@ -37,10 +37,10 @@ export default function CreateAppDialog() {
     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <Dialog open={modalOpen} onOpenChange={handleModelContent}>
         <DialogTrigger asChild>
-          <Button variant="outline" size="sm" className="text-zinc-800"><PlusIcon color="black" />Create</Button>
+          <Button size="sm" className="text-zinc-900 border-none"><PlusIcon color="black" className="-mr-1"/>Create</Button>
         </DialogTrigger>
         {token ? (
-          <DialogContent className="sm:max-w-[500px]">
+          <DialogContent className="sm:max-w-[500px] rounded-none">
             <DialogHeader>
               <DialogTitle>Your Application token</DialogTitle>
               <DialogDescription>
@@ -84,7 +84,7 @@ export default function CreateAppDialog() {
             <DialogFooter>
               <Button
                 type="submit"
-                variant="outline"
+                className="text-zinc-900 font-semibold"
                 onClick={(e) => {
                   e.preventDefault();
                   handleCreateApp(pname);

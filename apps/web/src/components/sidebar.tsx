@@ -5,8 +5,8 @@ export default function Sidebar() {
     <div className="w-52 shrink-0 md:block h-screen sticky top-0 overflow-hidden">
       <div className="w-full h-full border-r border-white/10">
         {/* logo */}
-        <div className="flex pt-8 md:px-6 items-center cursor-pointer hover:pr-5 pb-4 border-b border-white/10">
-            <h1 className="font-bold text-2xl text-zinc-200">opentail</h1>
+        <div className="flex pt-8 md:px-6 items-center justify-center cursor-pointer hover:pr-5 pb-4 border-b border-white/10">
+            <h1 className="font-bold text-2xl text-transparent bg-gradient-to-r from-[#4d7c0f] to-[#0c4a6e] bg-clip-text">opentail</h1>
           </div>
         {/* menu section */}
         <div className="flex flex-col h-full justify-between">
