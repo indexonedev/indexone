@@ -30,7 +30,7 @@ export default function CreateAppDialog() {
   const handleCreateApp = async (pname: string) => {
     console.log("handle create service")
     // const project = await createService(pname);
-    // setToken(project.ptoken);
+    setToken("1234567890");
   };
 
   return (
@@ -42,20 +42,20 @@ export default function CreateAppDialog() {
         {token ? (
           <DialogContent className="sm:max-w-[500px] rounded-none">
             <DialogHeader>
-              <DialogTitle>Your Application token</DialogTitle>
-              <DialogDescription>
-                This will be shown only once. copy it and save it somewhere
+              <DialogTitle className="text-zinc-200">Your Application token</DialogTitle>
+              <DialogDescription className="text-zinc-400">
+                This will be shown only once. copy and save it somewhere
                 safe.
               </DialogDescription>
             </DialogHeader>
             <div className="grid py-4 items-center">
-              <Label aria-required htmlFor="name" className="">
+              <Label aria-required htmlFor="name" className="text-zinc-200">
                 {token}
               </Label>
             </div>
           </DialogContent>
         ) : (
-          <DialogContent className="sm:max-w-[425px]">
+          <DialogContent className="sm:max-w-[500px]">
             <DialogHeader>
               <DialogTitle className="text-zinc-200">Create an app</DialogTitle>
               <DialogDescription>
