@@ -26,6 +26,7 @@
   "devDependencies": {
     "@indexone/eslint-config": "workspace:*",
     "@indexone/typescript-config": "workspace:*",
+    "@indexone/database": "workspace:*",
     "@types/node": "^20",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",

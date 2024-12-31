@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { PlusIcon } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { createNewApp } from "@/actions/apps";
 
 export default function CreateAppDialog() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,10 +28,14 @@ export default function CreateAppDialog() {
     return modalOpen == true ? setModalOpen(false) : setModalOpen(true);
   };
 
-  const handleCreateApp = async (pname: string) => {
+  const handleCreateApp = async (pname: string, description?: string) => {
     console.log("handle create service")
-    // const project = await createService(pname);
-    setToken("1234567890");
+    const app = await createNewApp({
+      id: crypto.randomUUID().substring(0, 8),
+      name: pname,
+      description: description || "",
+    });
+    // setToken(app.token);
   };
 
   return (
@@ -72,6 +77,7 @@ export default function CreateAppDialog() {
                   value={pname}
                   onChange={(pn) => setPname(pn.target.value)}
                   className="col-span-3 border border-zinc-600 text-zinc-300"
+                  required={true}
                 />
               </div>
               <div className="grid grid-cols-4 items-center gap-4">

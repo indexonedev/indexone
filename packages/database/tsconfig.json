@@ -1,6 +1,7 @@
 {
   "extends": "@indexone/typescript-config/base.json",
   "compilerOptions": {
+    "module": "CommonJS",
     "outDir": "dist",
     "rootDir": "src"
   },
