@@ -31,11 +31,10 @@ export default function CreateAppDialog() {
   const handleCreateApp = async (pname: string, description?: string) => {
     console.log("handle create service")
     const app = await createNewApp({
-      id: crypto.randomUUID().substring(0, 8),
       name: pname,
       description: description || "",
     });
-    // setToken(app.token);
+    setToken(app.token);
   };
 
   return (

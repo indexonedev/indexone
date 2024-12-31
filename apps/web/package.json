@@ -11,6 +11,8 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "@next/env": "^15.1.3",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.1",
@@ -24,9 +26,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@indexone/database": "workspace:*",
     "@indexone/eslint-config": "workspace:*",
     "@indexone/typescript-config": "workspace:*",
-    "@indexone/database": "workspace:*",
     "@types/node": "^20",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",

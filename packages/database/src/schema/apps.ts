@@ -4,7 +4,7 @@ import { sql } from "drizzle-orm";
 export const appsTable = sqliteTable("apps", {
   id: text("id").notNull().primaryKey(),
   name: text("name").notNull(),
-  description: text("description").notNull(),
+  description: text("description"),
   createdAt: text('created_at')
   .default(sql`(CURRENT_TIMESTAMP)`)
   .notNull(),
