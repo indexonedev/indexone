@@ -3,6 +3,7 @@
 import { db } from "@indexone/database";
 import { appsTable, InsertApp } from "@indexone/database";
 import { tokensTable } from "@indexone/database";
+import { generateToken } from "@indexone/id-generator";
 
 type createNewAppType = {
   name: string;
@@ -10,8 +11,11 @@ type createNewAppType = {
 };
 
 type Token = typeof tokensTable.$inferInsert;
+type SelectToken = typeof tokensTable.$inferSelect;
 export async function createNewApp(app: createNewAppType): Promise<{token: string, appId: string}> {
-  const token = "tail-" + crypto.randomUUID();
+  const token = "sk-" + generateToken();
+  // we don't store the full token in the database, we only store the first 8 characters
+  const tokenToSave = token.substring(0, 8);
   const appId = crypto.randomUUID().substring(0, 8);
   const tokenId = crypto.randomUUID().substring(0, 8);
   const appObj = await db.insert(appsTable).values({
@@ -22,7 +26,7 @@ export async function createNewApp(app: createNewAppType): Promise<{token: strin
   const tokenObj = await db.insert(tokensTable).values({
     id: tokenId,
     appId: appId,
-    token: token,
+    token: tokenToSave,
     status: 1,
   });
   return {

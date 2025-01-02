@@ -23,6 +23,7 @@ export default function CreateAppDialog() {
   const handleModelContent = () => {
     if (token) {
       setToken(null);
+      setPname("");
       return setModalOpen(false);
     }
     return modalOpen == true ? setModalOpen(false) : setModalOpen(true);

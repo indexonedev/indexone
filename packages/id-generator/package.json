@@ -1,0 +1,9 @@
+{
+  "name": "@indexone/id-generator",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  }
+}

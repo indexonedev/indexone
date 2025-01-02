@@ -18,6 +18,7 @@
     "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
     "lucide-react": "^0.469.0",
     "next": "^15.1.0",
     "react": "^19.0.0",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@indexone/database": "workspace:*",
     "@indexone/eslint-config": "workspace:*",
+    "@indexone/id-generator": "workspace:*",
     "@indexone/typescript-config": "workspace:*",
     "@types/node": "^20",
     "@types/react": "18.3.1",
