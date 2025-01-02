@@ -15,16 +15,20 @@ import { PlusIcon } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { createNewApp } from "@/actions/apps";
+import { useRouter } from "next/navigation";
 
 export default function CreateAppDialog() {
   const [modalOpen, setModalOpen] = useState(false);
   const [token, setToken] = useState<string | null>(null);
   const [pname, setPname] = useState<string>("");
+  const router = useRouter();
   const handleModelContent = () => {
     if (token) {
       setToken(null);
       setPname("");
-      return setModalOpen(false);
+      setModalOpen(false);
+      router.refresh();
+      return;
     }
     return modalOpen == true ? setModalOpen(false) : setModalOpen(true);
   };
